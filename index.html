@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Paul Merideth Home Page</title>
+		<meta charset="utf-8"/>
+		<link href="includes/styles.css" rel="stylesheet" type="text/css" media="screen"/>
+
+		<script>
+			/* DEFINING TABLE
+			*  INPUT
+			*     1. None
+			*  PROCESSING
+			*      1. Create 
+			*      2.  
+			*   OUTPUT
+			*      1. Change color of section borders at timed intervals.
+			*/
+
+			window.addEventListener('load', init, false);
+				
+
+			function init()
+			{
+				//document.getElementById('sect1p').addEventListener('click', showTable, false);
+				//Initialize all <p> outputs to a unique color
+				var WeddingPic = document.getElementById('weddingPic');
+				WeddingPic.style.display = "none";
+				var AngelPic = document.getElementById('angelPic');
+				AngelPic.style.display = "none";
+				var GuitarSolo = document.getElementById('guitarSolo');
+				GuitarSolo.style.display = "none";
+
+			/*	var pID='myHeader';
+				var elem=document.getElementById(pID);
+				elem.style.color="red";
+				reColor();
+			*/
+			}
+
+			function reColor()
+			{
+				var pID='myHeader';
+				var elem=document.getElementById(pID);
+				var currColor=elem.style.color;
+				elem.style.color=newColor(currColor);
+				currColor=elem.style.color;
+
+				timer1Timeout = setTimeout(function(){reColor()}, 300);
+			}
+
+			function newColor(pColor)
+			{
+				if(pColor=="red")
+					return "blue";
+				else if(pColor=="blue")
+					return "green";
+				else if(pColor=="green")
+					return "red";
+			}
+
+			function ShowPic()
+			{				
+				var WeddingPic = document.getElementById('weddingPic');
+				var WeddingPicStatus = WeddingPic.style.display;
+				var AngelPic = document.getElementById('angelPic');
+				var AngelPicStatus = AngelPic.style.display;
+
+				//If either pic showing, toggle off and return.
+				if(WeddingPicStatus=="inline-block" || AngelPicStatus=="inline-block")
+				{
+					clearTimeout(myTimer);
+					WeddingPic.style.display = "none";
+					AngelPic.style.display = "none";
+					return;
+				}
+				togglePics();
+			}
+
+			function togglePics()
+			{
+				var WeddingPic = document.getElementById('weddingPic');
+				var WeddingPicStatus = WeddingPic.style.display;
+				var AngelPic = document.getElementById('angelPic');
+				var AngelPicStatus = AngelPic.style.display;
+
+				if(WeddingPicStatus == 'none')
+				{
+					WeddingPic.style.display = "inline-block";
+					AngelPic.style.display = "none";
+				}
+				else
+				{
+					WeddingPic.style.display = "none";
+					AngelPic.style.display = "inline-block";
+				}
+				myTimer = setTimeout(function(){togglePics()}, 2000);
+			}
+
+			function ShowSolo()
+			{
+				var GuitarSolo = document.getElementById('guitarSolo');
+				var GuitarSoloStatus = GuitarSolo.style.display;
+
+				if(GuitarSoloStatus == 'none')
+				{
+					GuitarSolo.style.display = "inline-block";				
+				}
+				else
+				{
+					GuitarSolo.style.display = "none";					
+				}
+			}
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="myHeader">
+				<h1 id="myLogo">Paul Merideth</h1>
+			</div>
+
+			<div id="sect1">
+				<h1>My Family</h1>
+				<p class="sect1p">
+					Hi, I'm Paul Merideth.  I have four grown children, all married, and 11 grandchlidren, all awesome!  I became a widow 3 years ago, and was remarried in the Salt Lake Temple on May 30, 2015.  I now live in Riverton, Utah, as do all of my kids and grandkids.<br/><br/>Click on the button below to see my wife and I at the Salt Lake Temple and on top of Angel's Landing in Zion National Park<br/>
+				</p>
+				<div class="buttonFamilyPic">
+					<button type="button" id="FamilyPic" onclick="ShowPic()">Family Pictures On/Off</button>
+				</div>
+			</div>
+
+			<div id="familyPics">
+				<img src="imgs/Wedding.png" id="weddingPic" alt="not available" width="300"/>;
+				<img src="imgs/AngelsLanding.jpg" id="angelPic" alt="not available" width="500"/>;
+				<br class="myClear"/>
+			</div>
+
+			<div id="sect2">
+				<h1>Hobbies</h1>
+				<p class="sect2p">
+					I have loved playing the guitar since I was a young teenager.  While I lived in New Hampshire, I and some of my friends from the stake formed a band to play in a stake talent show.  We had so much fun that we stuck togeter for a couple years.<br/><br/>Click the button below to watch a video of my guitar solo in the song 25 or 6 to 4 at a stake dance.
+				</p>
+				<div class="buttonGuitarSolo">
+					<button type="button" id="GuitarSolo" onclick="ShowSolo()">Guitar Solo On/Off</button>
+				</div>
+
+			</div>
+
+			<div id="guitarSolo">
+				<video src="video/guitarsolo.mp4" id="guitarSolo" auto controls alt="not available" width="300"/>;
+				<br class="myClear"/>
+			</div>
+
+			<div id="sect3">
+				<h1>Work</h1>
+				<p class="sect3p">
+					I have worked on the east coast for the past 20 years in telecommunications.  One month ago, I was hired by Oracle Corporation to manage a team of suppor engineers.  I really love my new job and especially love being in Utah near my family.<br/><br/>Here is a link to my LinkedIn account <a href="https://www.linkedin.com/in/paulmerideth">LinkedIn</a>
+				</p>
+			</div>
+
+			<div id="assignments">
+				<p class="assignText">
+					Click <a href="assignments.html" title="Link to CS-313 Assignments">Assignments</a> to see my assignments page.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
