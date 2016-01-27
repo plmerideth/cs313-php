@@ -1,12 +1,11 @@
 <?php
 	session_start();
 
-	//Check for p="display".  If true, display results only
-
 	$display_only = FALSE;
 	$survey_done = FALSE;
 	$already_voted = FALSE;
 
+	//Check for p="display".  If true, display results only
 	if(isset($_GET['p'])) //Use GET in <a> link
 	{
 
