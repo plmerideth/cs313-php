@@ -31,6 +31,14 @@
             $page='login.inc.php';
             $page_title="Login Page";
         break;
+        case 'logOut':
+            $page='logout.inc.php';
+            $page_title="Logout Page";
+        break;        
+        case 'displayFamilyPics':
+        	$page='familyPics.inc.php';
+        	$page_title="Family Pictures";
+        break;
         default:
             $page='main.inc.php';
             $page_title="Home Page";                

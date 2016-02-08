@@ -9,6 +9,7 @@ function loadDatabase()
 	$dbPort = "";
 	$dbUser = "";
 	$dbPassword = "";
+	global $db;
 
 	$dbName = "cs313";
 
@@ -17,14 +18,14 @@ function loadDatabase()
 	if($openShiftVar == null || $openShiftVar == "")
 	{
 		//Not in OpenShift environment
-		echo "Using MY LOCAL credentials<br/><br/>";
+		//echo "Using MY LOCAL credentials<br/><br/>";
 
 		require("setLocalDatabaseCredentials.php");
 	}
 	else
 	{
 		//In OpenShift environment
-		echo "Using OpenShift Credentials<br/><br/>";
+		//echo "Using OpenShift Credentials<br/><br/>";
 
 		$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
 		$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
@@ -32,7 +33,7 @@ function loadDatabase()
 		$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 	}
 
-	echo "host:$dbHost:$dbPort  dbName:$dbName  User: $dbUser  Password: $dbPassword<br/>\n";
+	//echo "host:$dbHost:$dbPort  dbName:$dbName  User: $dbUser  Password: $dbPassword<br/>\n";
 
 	try
 	{
