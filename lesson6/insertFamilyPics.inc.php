@@ -80,7 +80,7 @@
 
 			if($newComment)
 			{
-				$query = 'INSERT INTO Comments
+				$query = 'INSERT INTO comments
 								(comment, datetime, pic_id, acct_id)
 							VALUES
 								(:comment, :datetime, :pic_id, :acct_id)';
