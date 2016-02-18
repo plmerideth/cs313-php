@@ -42,6 +42,9 @@
 					  FROM users
 					  WHERE username=:username';
 
+			echo "QUERY = " . $query . "<br/>";
+			exit();
+
 		  	$statement = $db->prepare($query);
 		  	$statement->bindValue(':username', $username);
 		  	$statement->execute();
