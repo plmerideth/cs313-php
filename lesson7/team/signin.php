@@ -20,7 +20,7 @@
 		if(empty($_POST['username']))
 		{
 			$e=FALSE;
-			$errorMessage.="Please enter a Username";
+			$errorMessage.="Please enter a Username. ";
 		}
 
 		if(empty($_POST['pass']))

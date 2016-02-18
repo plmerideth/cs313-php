@@ -2,6 +2,6 @@
 
 $dbHost = "localhost";
 $dbPort = "80";
-$dbUser = "admin";
-$dbPassword = "loga2872";
+$dbUser = "admini2WFkSP";
+$dbPassword = "upNGuIByZQPU";
 ?>
