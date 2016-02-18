@@ -61,6 +61,7 @@
 				  	echo "ID: " . $users['acct_id'] . "<br/>";
 				  	echo "User Name: " . $users['username'] . "<br/>";
 				  	echo "Password: " . $users['password'] . "<br/>";
+				  	exit();
 					
 					//Store retrieved values in $_SESSION
 					$_SESSION['acct_id'] = $users['acct_id'];
