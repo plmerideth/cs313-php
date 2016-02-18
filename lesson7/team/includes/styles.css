@@ -1,0 +1,409 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+.myClear
+{
+	clear:both;
+}
+html
+{
+	overflow-y: scroll;  /*Force vertical scroll bar to avoid screen shift */
+	/* background-image: url(../imgs/background_003.jpg); */
+	/* background-repeat: no-repeat; */
+	background: linear-gradient(-90deg, Linen, Maroon);
+}
+#myHeader
+{
+	font-family: 'Rock Salt', cursive;
+	font-size: 25px;
+	border-bottom: 5px solid black;
+	background-color: white;
+}
+#myLogo
+{
+	margin: 0px;
+	margin-left: 50px;
+}
+body
+{
+	margin: 0;
+}
+.container
+{
+	/* margin: auto;*/
+	/*border: 5px solid black;*/
+	/* width: 1000px; */
+	/* width: 1200px; */
+	/* background-color: DarkGrey; */
+	/*border-radius: 15px; */
+}
+#menu
+{
+	margin: auto;
+	width: 500px;
+	height: 100px;
+	text-align: center;
+	margin-top: 30px;
+	/* border: 1px solid black; */
+}
+
+#menu a
+{
+	text-decoration: none;
+}
+
+.submitFamilyPics
+{
+	color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display';
+}
+.submitFamilyPics:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+}
+
+
+.submitLogin
+{
+	color: black;
+	float: left;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display';
+}
+.submitLogin:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+}
+
+.submitLoginSpec
+{
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 2px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display';
+}
+.submitLoginSpec:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:1px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #000000;
+}
+
+td, th
+{
+	padding: 10px;
+}
+
+td
+{
+	padding: 10px 5px 3px 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+table
+{
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+	width: 700px;
+}
+
+.categoryTitle
+{
+	margin-left: 25px;
+	margin-right: 200px;
+	float: left;
+}
+.loginTitle
+{
+	text-align: center;
+}
+
+.logInPage
+{
+	font-size: 50px;
+	vertical-align: middle;
+	line-height: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ffffff;
+    font-family: 'Playfair Display';	
+}
+
+.logInPage:hover
+{
+    /*Make border same color as background to appear to disappear without changing button dimensions*/
+    border:2px solid #000000;
+    border-radius: 5px;
+    /*box-shadow creates glow with hover*/
+    box-shadow: 0 0 30px black;
+    color: #ffffff;	
+}
+
+.label
+{
+	float: left;
+	width: 300px;
+	vertical-align: top;
+	text-align: right;
+	margin-right: 15px;
+}
+
+.myFieldSet
+{
+	font-size: 30px;
+	margin-bottom: 30px;
+	margin-left: 25px;
+	width: 700px;
+}
+
+.newFileMsg
+{
+	font-size: 20px;
+	margin-left: 30px;
+	color: white;
+}
+
+.inputText
+{
+	font-size: 20px;
+	margin-top: 5px;
+	margin-left: 76px;
+	margin-bottom: 0px;
+}
+
+.inputNewCat
+{
+	font-size: 20px;
+	margin-top: 5px;
+	margin-left: 35px;
+}
+
+.inputTextSpec
+{
+	font-size: 20px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.inputComment
+{
+	font-size: 20px;
+	margin-left: 65px;
+}
+
+.divPicDisplay
+{
+	margin-left: 25px;
+	margin-bottom: 25px;
+	border: 2px solid white;
+	width: 750px;
+	background-color: white;
+}
+
+
+
+.errorMessage
+{
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
+	color: white;
+}
+
+.welcome
+{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+
+#sect1
+{
+	margin: 20px;
+	/* border-radius: 15px;*/
+	
+	/* background: linear-gradient(-90deg, Azure, Brown); */
+	width: 900px;
+	float: left;
+}
+#sect1 h1
+{
+	text-align: center;
+	font-size: 50px;
+	color: AntiqueWhite;
+}
+.sect1p
+{
+	margin: auto;
+	width: 850px;
+	color: AntiqueWhite;
+	font-size: 25px;
+	border-radius: 5px;
+}
+
+.buttonFamilyPic
+{
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 125px;
+	font-size: 20px;
+	background-color: #4A6B8E;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, .4), 0 1px 3px #333333;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	color: #FFF;
+	text-align: center;		
+}
+
+.buttonGuitarSolo
+{
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 125px;
+	font-size: 20px;
+	background-color: #4A6B8E;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px rgba(255, 115, 100, .4), 0 1px 3px #333333;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	color: #FFF;
+	text-align: center;		
+}
+
+
+#familyPics
+{
+	float:right;
+}
+
+#weddingPic
+{
+	margin-top: 25px;
+	margin-right: 50px;
+}
+#angelPic
+{
+	margin-top: 150px;
+}
+
+#guitarSolo
+{
+	float: right;
+	margin-right: 50px;
+}
+
+#sect2
+{
+	float: left;
+	width: 900px;
+	margin: 20px;
+}
+#sect2 h1
+{
+	font-size: 50px;
+	color: AntiqueWhite;
+	text-align: center;
+}
+.sect2p
+{
+	margin: auto;
+	width: 850px;
+	color: AntiqueWhite;
+	font-size: 25px;
+	border-radius: 5px;
+}
+
+#sect3
+{
+	float: left;
+	margin: 20px;
+	width: 900px;
+}
+
+#sect3 h1
+{
+	font-size: 50px;
+	color: AntiqueWhite;
+	text-align: center;
+}
+.sect3p
+{
+	margin: auto;
+	width: 850px;
+	color: AntiqueWhite;
+	font-size: 25px;
+	border-radius: 5px;
+}
+#assignments
+{
+	margin: 20px;
+	width: 900px;
+}
+.assignText
+{
+	margin: auto;
+	width: 850px;
+	color: AntiqueWhite;
+	font-size: 25px;
+	border-radius: 5px;		
+}
+
+a
+{
+	text-decoration: none;
+}
+a:hover
+{
+	background-color: transparent;
+	text-decoration: underline;
+}
+a:visited
+{
+	color: black;
+};
