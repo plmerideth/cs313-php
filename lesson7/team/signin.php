@@ -7,7 +7,8 @@
 		 */
 	session_start();
 
-	require('includes/database.php');	
+	require('includes/database.php');
+	require('password.php');
 
 	$errorMessage=NULL;
 
@@ -41,9 +42,6 @@
 			$query = 'SELECT acct_id, username, password
 					  FROM users
 					  WHERE username=:username';
-
-			echo "QUERY = " . $query . "<br/>";
-			exit();
 
 		  	$statement = $db->prepare($query);
 		  	$statement->bindValue(':username', $username);
