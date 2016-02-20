@@ -32,40 +32,40 @@
 
 			$query = 'SELECT acct_id, first_name, last_name, email, password, datetime
 					  FROM accounts
-					  WHERE email=:email AND password=:password';
+					  WHERE email=:email';
 
 		  	$statement = $db->prepare($query);
 		  	$statement->bindValue(':email', $email);
-		  	$statement->bindValue(':password', $password);
 		  	$statement->execute();
 		  	
-		  	$users = $statement->fetchAll();
+		  	$users = $statement->fetch();
 		  	$statement->closeCursor();
 
-		  	if($users == FALSE) //Invalid login
+		  	if($users==FALSE ) //Invalid login
 		  	{
-		  		$errorMessage = "Invalid credentials!";
+		  		$errorMessage = "Invalid Credentials!";
 		  	}
 		  	else //Valid login
 		  	{
-		  		
-			  	foreach($users as $user) :
-			  		echo "ID: " . $user['acct_id'] . "<br/>";
-			  		echo "First Name: " . $user['first_name'] . "<br/>";
-			  		
-			  		echo "Last Name: " . $user['last_name'] . "<br/>";
-			  		echo "Email: " . $user['email'] . "<br/>";
-			  		echo "Password: " . $user['password'] . "<br/>";
-			  	endforeach;
-				
-
-				//Store retrieved values in $_SESSION
-				$_SESSION['first_name'] = $user['first_name'];
-				$_SESSION['acct_id'] = $user['acct_id'];
-
-				$url='index.php';
-				header("Location: $url");
-				exit();
+		  		$verified = password_verify($password, $users['password']);
+		  		if($verified)
+		  		{
+				  	echo "ID: " . $users['acct_id'] . "<br/>";
+				  	echo "User Name: " . $users['username'] . "<br/>";
+				  	echo "Password: " . $users['password'] . "<br/>";
+					
+					//Store retrieved values in $_SESSION
+					$_SESSION['acct_id'] = $users['acct_id'];
+					$_SESSION['first_name'] = $users['first_name'];
+					
+					$url='index.php';
+					header("Location: $url");
+					exit();
+		  		}
+		  		else
+		  		{
+		  			$errorMessage = "Invalid Credentials!";
+		  		}			  		
 		  	}
 		}
 	} //End of submit IF    

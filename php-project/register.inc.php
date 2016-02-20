@@ -42,6 +42,7 @@
 			$lastname = $_POST['lastname'];
 			$email = $_POST['email'];
 			$password = $_POST['pass'];
+			$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 			date_default_timezone_set("America/Denver");
 			$datetime = date('Y-m-d H:i:s');
@@ -55,7 +56,7 @@
 		  	$statement->bindValue(':firstname', $firstname);
 		  	$statement->bindValue(':lastname', $lastname);
 		  	$statement->bindValue(':email', $email);
-		  	$statement->bindValue(':password', $password);
+		  	$statement->bindValue(':password', $passwordHash);
 		  	$statement->bindValue(':datetime', $datetime);		  	
 		  	$statement->execute();		  	
 		  	$statement->closeCursor();
