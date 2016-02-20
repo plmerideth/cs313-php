@@ -154,7 +154,7 @@
 					 	echo '<p class="newFileMsg">The file ' . $filename . " has been successfully added!</p>";
 				?>	
 		        <div align="center">		        	 
-		        	<a href="index.php?p=displayFamilyPics" title="Home" class="submitFamilyPics">Cancel</a>
+		        	<a href="index.php" title="Home" class="submitFamilyPics">Cancel</a>
 		        </div>
 			</form>
 		</div>

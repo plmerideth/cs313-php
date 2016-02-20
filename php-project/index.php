@@ -31,6 +31,10 @@
             $page='login.inc.php';
             $page_title="Login Page";
         break;
+        case 'register':
+            $page='register.inc.php';
+            $page_title="Registration Page";
+        break;        
         case 'logOut':
             $page='logout.inc.php';
             $page_title="Logout Page";

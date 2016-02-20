@@ -20,7 +20,9 @@
 				<?php
 					if(!isset($_SESSION['first_name'])) //User not logged in
 					{
-						echo '<a href="index.php?p=logIn" title="Please Login" class="logInPage">Click Here to Log In</a>';	
+						echo '<a href="index.php?p=logIn" title="Please Login" class="logInPage">Click Here to Log In</a>';
+						echo "<br/>";
+						echo '<a href="index.php?p=register" title="Please Register" class="logInPage">Click Here to Register</a>';	
 					}
 					else //User logged in
 					{
